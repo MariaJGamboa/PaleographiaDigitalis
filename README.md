@@ -1,0 +1,2 @@
+# PaleographiaDigitalis
+Machine Learning Project 
