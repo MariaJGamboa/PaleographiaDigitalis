@@ -10,9 +10,8 @@ from flask import Flask, render_template, request, jsonify
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 # Paths
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-
-app = Flask(__name__)
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+app = Flask(__name__, template_folder=PROJECT_ROOT)
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 NUM_CLASSES = 12
@@ -44,7 +43,7 @@ def load_models():
         nn.Linear(in_features_conv, NUM_CLASSES)
     )
 
-    path_conv = os.path.join(PROJECT_ROOT, "models", "models/convnext_small_384_clamm.pth")
+    path_conv = os.path.join(PROJECT_ROOT, "models", "convnext_small_384_clamm.pth")
     state_dict_conv = torch.load(path_conv, map_location=DEVICE)
     if isinstance(state_dict_conv, dict) and "state_dict" in state_dict_conv:
         state_dict_conv = state_dict_conv["state_dict"]
@@ -58,7 +57,7 @@ def load_models():
     in_features_eff = model_eff.classifier[1].in_features
     model_eff.classifier[1] = nn.Linear(in_features_eff, NUM_CLASSES)
 
-    path_eff = os.path.join(PROJECT_ROOT, "models", "models/efficientnet_v2_silu_384_clamm.pth")
+    path_eff = os.path.join(PROJECT_ROOT, "models", "efficientnet_v2_silu_384_clamm.pth")
     state_dict_eff = torch.load(path_eff, map_location=DEVICE)
     if isinstance(state_dict_eff, dict) and "state_dict" in state_dict_eff:
         state_dict_eff = state_dict_eff["state_dict"]
