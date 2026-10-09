@@ -1,0 +1,13 @@
+flask
+torch
+torchvision
+pandas
+pillow
+numpy
+numpy<2
+jupyter
+scikit-learn
+matplotlib
+seaborn
+tqdm
+ipywidgets
