@@ -40,6 +40,7 @@ Follow these steps to set up, run, and explore the project locally:
 Install all required Python libraries by running:
 ```bash
 pip install -r requirements.txt
+```
 
 ### 3. Run the Jupyter Notebooks
 
@@ -49,9 +50,11 @@ pip install -r requirements.txt
 
 ### 4. Start the Application
 Once the model weights and environment are ready, launch the local server:
+```bash
 python app.py
+```
 
-Then, open http://127.0.0.1:5001 in your browser to interact with the application.
+Then, open **http://127.0.0.1:5001** in your browser to interact with the application.
 
-If not try the App online
-Live Deployment: sidereus.dev/paleographia-digitalis
+### If not try the App online
+Live Deployment: **https://sidereus.dev/paleographia-digitalis**
