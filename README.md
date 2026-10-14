@@ -57,5 +57,7 @@ python app.py
 
 Then, open **http://127.0.0.1:5001** in your browser to interact with the application.
 
+If you want in the `examples/` directory are some images of manuscripts to test the application.
+
 ### If not try the App online
 Live Deployment: **https://sidereus.dev/paleographia-digitalis**
