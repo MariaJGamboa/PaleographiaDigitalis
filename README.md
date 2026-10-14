@@ -9,10 +9,11 @@ Is an academic computer vision project, for the Machine Learning for the Humanit
 - **Advanced Ensemble Architecture:** Combines a tailored **ConvNeXt-Small** (capturing global semantic contexts and layouts) and **EfficientNet-V2-S** (specialized in fine-grained edge and stroke representations) via a 60/40 weighted probability soft-voting mechanism.
 - **High-Resolution Processing:** Scales input resolution up to **$384 \times 384$ pixels** to successfully preserve high-density ink trajectories, ligatures, and *minim* structures.
 - **Domain-Specific Regularization:** Incorporates class-weighted cross-entropy loss (mitigating imbalance across difficult categories like Types 6, 8, and 9) alongside manuscript-tailored augmentations (`RandomResizedCrop`, `ColorJitter`) while avoiding destructive geometric flips.
-- **Paleographical Contextualization:** Accounts for historical manuscript variables such as morphological mixing (*mescidanza*) and the taxonomic 
+- **Paleographical Contextualization:** Classification errors and inconsistencies frequently arise due to the lack of standardization in the Middle Ages, during which several scripts intertwined with one another over time.
 ---
 
 ## Dataset (ICDAR 2017 CLaMM)
+The model was trained on the ICDAR CLaMM (Classification of Latin Medieval Manuscripts) dataset,used in the ICFHR 2017 Competition on the Classification of Medieval Handwritings in Latin Script
 The dataset comprises 4,540 high-resolution manuscript scans categorized across 12 standard Latin script classes:
 1. Caroline
 2. Cursiva
