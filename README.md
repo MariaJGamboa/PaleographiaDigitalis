@@ -1,7 +1,7 @@
 # Paleographia Digitalis
 ## Automated Latin Manuscript Classification
 
-Is an academic computer vision project, for the Machine Learning for the Humanities course of the DHDK master’s degree at University of Bologna, A.Y. 2025/2026, that bridges automated deep learning classification with traditional archival scholarship. It utilizes a high-performance weighted ensemble of modern neural network architectures to classify historical handwriting in medieval Latin manuscripts into 12 distinct paleographical traditions.
+It is an academic computer vision project, for the Machine Learning for the Humanities course of the DHDK master’s degree at University of Bologna, A.Y. 2025/2026, that bridges automated deep learning classification with traditional archival scholarship. It utilizes a weighted ensemble of modern neural network architectures to classify historical handwriting in medieval Latin manuscripts into 12 distinct paleographical traditions.
 
 ---
 
